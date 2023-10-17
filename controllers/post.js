@@ -21,6 +21,7 @@ export const getPosts = (req, res) => {
                 res.status(500).json({ message: 'Server Error' });
             } else {
                 res.status(200).json(data);
+                console.log(data);
             }
         })
     });
