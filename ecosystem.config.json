@@ -1,0 +1,29 @@
+[
+    {
+        "name": "server-instance-1",
+        "script": "index.js",
+        "env": {
+            "NODE_ENV": "production",
+            "PORT": 3000
+        },
+        "node_args": "--max-old-space-size=50"
+    },
+    {
+        "name": "server-instance-2",
+        "script": "index.js",
+        "env": {
+            "NODE_ENV": "production",
+            "PORT": 3001
+        },
+        "node_args": "--max-old-space-size=50"
+    },
+    {
+        "name": "server-instance-3",
+        "script": "index.js",
+        "env": {
+            "NODE_ENV": "production",
+            "PORT": 3002
+        },
+        "node_args": "--max-old-space-size=50"
+    }
+]
