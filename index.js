@@ -16,10 +16,6 @@ const PORT = process.env.PORT || 5000;
 
 app.use(Express.static(path.join(__dirname, 'build')));
 
-app.get('/*', function (req, res) {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
-
 //middlewares
 app.use(cors());
 
@@ -33,6 +29,10 @@ app.use('/api/comments',commentRoutes);
 app.use('/api/auth',authRoutes);
 app.use('/api/likes',likeRoutes);
 app.use('/api/relationships',relationshipRoutes);
+
+app.get('/*', function (req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
  
 app.listen(PORT,()=>{
     console.log(`server is listening on port ${PORT}`);
